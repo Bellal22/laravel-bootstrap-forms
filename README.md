@@ -94,7 +94,7 @@ php artisan vendor:publish --tag=locales:flags
 
 ```blade
 {{ BsForm::password('password', ['class' => 'awesome']) }}
-{{ BsForm::password('password')->attr('class', 'awesome') }}
+{{ BsForm::password('password')->attribute('class', 'awesome') }}
 ```
 
 ## Generating Other Inputs
@@ -240,6 +240,12 @@ php artisan vendor:publish --tag=locales:flags
 ```blade
 {{ BsForm::text('username')->style('vertical') }}
 {{ BsForm::text('email')->style('default') }}
+```
+
+> `->attribute($key, $value = null)` : To Add any other attributes. 
+
+```blade
+{{ BsForm::password('password')->attribute('autocomplete', 'current-password') }}
 ```
 
 > `->close()` : To close the form tag.
